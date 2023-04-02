@@ -1,0 +1,101 @@
+RUN	CLM.CLM_Transaction	clm-transaction	1680451007713	CLM TRANSACTION	3.6.1
+USER	CLM TRANSACTION	START	1680451009256
+REQUEST		Transaction	1680451009410	1680451009412	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451010281	1680451010281	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451011284	1680451011285	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451011296
+USER	CLM TRANSACTION	START	1680451021181
+REQUEST		Transaction	1680451021192	1680451021195	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451022196	1680451022197	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451023185	1680451023185	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451023186
+USER	CLM TRANSACTION	START	1680451033177
+REQUEST		Transaction	1680451033179	1680451033180	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451034180	1680451034180	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451035178	1680451035179	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451035179
+USER	CLM TRANSACTION	START	1680451045178
+REQUEST		Transaction	1680451045192	1680451045197	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451046182	1680451046182	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451047186	1680451047186	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451047188
+USER	CLM TRANSACTION	START	1680451057178
+REQUEST		Transaction	1680451057180	1680451057181	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451058186	1680451058187	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451059182	1680451059182	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451059185
+USER	CLM TRANSACTION	START	1680451069177
+REQUEST		Transaction	1680451069179	1680451069180	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451070185	1680451070185	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451071185	1680451071185	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451071186
+USER	CLM TRANSACTION	START	1680451081177
+REQUEST		Transaction	1680451081180	1680451081181	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451082182	1680451082182	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451083183	1680451083184	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451083187
+USER	CLM TRANSACTION	START	1680451093177
+REQUEST		Transaction	1680451093180	1680451093182	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451094181	1680451094181	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451095182	1680451095182	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451095183
+USER	CLM TRANSACTION	START	1680451105177
+REQUEST		Transaction	1680451105180	1680451105182	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451106180	1680451106180	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451107181	1680451107181	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451107182
+USER	CLM TRANSACTION	START	1680451117178
+REQUEST		Transaction	1680451117180	1680451117183	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451118180	1680451118180	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451119181	1680451119181	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451119183
+USER	CLM TRANSACTION	START	1680451129177
+REQUEST		Transaction	1680451129179	1680451129181	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451130180	1680451130181	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451131180	1680451131181	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451131182
+USER	CLM TRANSACTION	START	1680451141177
+REQUEST		Transaction	1680451141180	1680451141181	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451142180	1680451142180	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451143181	1680451143181	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451143182
+USER	CLM TRANSACTION	START	1680451153177
+REQUEST		Transaction	1680451153179	1680451153182	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451154180	1680451154180	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451155180	1680451155180	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451155181
+USER	CLM TRANSACTION	START	1680451165177
+REQUEST		Transaction	1680451165179	1680451165181	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451166179	1680451166179	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451167179	1680451167180	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451167180
+USER	CLM TRANSACTION	START	1680451177177
+REQUEST		Transaction	1680451177179	1680451177181	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451178180	1680451178180	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451179181	1680451179181	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451179182
+USER	CLM TRANSACTION	START	1680451189177
+REQUEST		Transaction	1680451189180	1680451189182	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451190179	1680451190180	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451191180	1680451191180	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451191181
+USER	CLM TRANSACTION	START	1680451201178
+REQUEST		Transaction	1680451201180	1680451201182	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451202181	1680451202181	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451203180	1680451203180	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451203181
+USER	CLM TRANSACTION	START	1680451213178
+REQUEST		Transaction	1680451213180	1680451213184	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451214180	1680451214181	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451215179	1680451215179	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451215179
+USER	CLM TRANSACTION	START	1680451225177
+REQUEST		Transaction	1680451225179	1680451225181	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451226179	1680451226179	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451227179	1680451227179	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451227180
+USER	CLM TRANSACTION	START	1680451237178
+REQUEST		Transaction	1680451237183	1680451237185	KO	j.n.UnknownHostException: esbpprd1: Échec temporaire dans la résolution du nom
+REQUEST		Transaction	1680451238180	1680451238180	KO	j.n.UnknownHostException: esbpprd1
+REQUEST		Transaction	1680451239180	1680451239180	KO	j.n.UnknownHostException: esbpprd1
+USER	CLM TRANSACTION	END	1680451239181
