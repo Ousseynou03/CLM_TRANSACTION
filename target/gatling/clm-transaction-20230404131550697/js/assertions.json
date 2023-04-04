@@ -1,0 +1,10 @@
+{
+  "simulation": "CLM.CLM_Transaction",
+  "simulationId": "clm-transaction-20230404131550697",
+  "start": 1680614151782,
+  "description": "CLM TRANSACTION",
+  "scenarios": ["CLM TRANSACTION 1", "CLM TRANSACTION 2", "CLM TRANSACTION 3"],
+  "assertions": [
+
+  ]
+}

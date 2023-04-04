@@ -1,11 +1,11 @@
 package CLM
-import com.redis.serialization.Parse
+
 
 import scala.concurrent.duration._
-import sys.process._
+
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import io.gatling.jdbc.Predef._
+
 
 import scala.language.postfixOps
 
@@ -56,11 +56,15 @@ class CLM_Transaction  extends  Simulation{
   }
 
 
-  val TransacAchat = scenario("CLM TRANSACTION").exec(ObjectTransaction.scnTransactionAchat)
+  val TransacAchat1 = scenario("CLM TRANSACTION 1").exec(ObjectTransaction.scnTransactionAchat1)
+  val TransacAchat2 = scenario("CLM TRANSACTION 2").exec(ObjectTransaction.scnTransactionAchat2)
+  val TransacAchat3 = scenario("CLM TRANSACTION 3").exec(ObjectTransaction.scnTransactionAchat3)
 
 
   setUp(
-    TransacAchat.inject(rampUsers(nbVu * 2) during ( TpsMonteEnCharge  minutes) , nothingFor(  TpsPalier  minutes))
+    TransacAchat1.inject(rampUsers(nbVu * 10) during ( TpsMonteEnCharge  minutes) , nothingFor(  TpsPalier  minutes)),
+    TransacAchat2.inject(rampUsers(nbVu * 10) during ( TpsMonteEnCharge  minutes) , nothingFor(  TpsPalier  minutes)),
+    TransacAchat3.inject(rampUsers(nbVu * 10) during ( TpsMonteEnCharge  minutes) , nothingFor(  TpsPalier  minutes))
   ).protocols(httpProtocol)
     .maxDuration( DureeMax minutes)
 
