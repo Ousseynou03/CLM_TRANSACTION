@@ -13,7 +13,7 @@ class CLM_Transaction  extends  Simulation{
 
   private val host: String = System.getProperty("urlCible", "http://esbpprd1:1608")
   private val VersionAppli: String = System.getProperty("VersionApp", "Vxx.xx.xx")
-  private val TpsMonteEnCharge: Int = System.getProperty("tpsMonte", "4").toInt
+  private val TpsMonteEnCharge: Int = System.getProperty("tpsMonte", "15").toInt
   private val TpsPalier: Int = System.getProperty("tpsPalier", (2 * TpsMonteEnCharge).toString).toInt
   private val TpsPause: Int = System.getProperty("tpsPause", "60").toInt
   private val DureeMax: Int = System.getProperty("dureeMax", "1").toInt + 5 * (TpsMonteEnCharge + TpsPalier)
@@ -56,9 +56,9 @@ class CLM_Transaction  extends  Simulation{
   }
 
 
-  val TransacAchat1 = scenario("CLM TRANSACTION 1").exec(ObjectTransaction.scnTransactionAchat1)
-  val TransacAchat2 = scenario("CLM TRANSACTION 2").exec(ObjectTransaction.scnTransactionAchat2)
-  val TransacAchat3 = scenario("CLM TRANSACTION 3").exec(ObjectTransaction.scnTransactionAchat3)
+  val TransacAchat1 = scenario("CLM_TRANSACTION_1").exec(ObjectTransaction.scnTransactionAchat1)
+  val TransacAchat2 = scenario("CLM_TRANSACTION_2").exec(ObjectTransaction.scnTransactionAchat2)
+  val TransacAchat3 = scenario("CLM_TRANSACTION_3").exec(ObjectTransaction.scnTransactionAchat3)
 
 
   setUp(

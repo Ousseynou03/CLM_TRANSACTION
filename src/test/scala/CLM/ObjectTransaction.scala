@@ -23,37 +23,41 @@ object ObjectTransaction {
 
   private val FichierPath: String = System.getProperty("dataDir", "data/")
   private val FichierDataClient: String = "Liste.csv"
-  private val FichierDataN: String = "n.csv"
   val jddDateClient = csv(FichierPath + FichierDataClient).circular
-  val jddDataN = csv(FichierPath + FichierDataN).circular
 
-  //Valeur dynamique de n
-  //val ticketIdSeq1 = Iterator.from(1).map(i => "1000000-$i")
-  val ticketIdSeq2 = Iterator.from(1).map(i => "2000000-$i")
-  val ticketIdSeq3 = Iterator.from(1).map(i => "3000000-$i")
-  val ticketIdSeq1: Iterator[String] = Iterator.from(1).map(i => "1000000-$i")
-
+  ///////////////////////////////////////////////////////
+  //Valeur dynamique de n pour chaque post
+  /////////////////////////////////////////////////////////
+  val ticketIdSeq1: Iterator[String] = Iterator.from(1).map(i => s"1000000-$i")
+  val ticketIdSeq2: Iterator[String] = Iterator.from(1).map(i => s"2000000-$i")
+  val ticketIdSeq3: Iterator[String] = Iterator.from(1).map(i => s"3000000-$i")
 
 
 //SCENARIO 1
   val scnTransactionAchat1 = scenario("CLM TRANSACTION 1")
-    .repeat(NbreIter) { //Répeter la transaction 3 fois
-      exec(flushSessionCookies)
+      .exec(flushSessionCookies)
         .exec(flushHttpCache)
         .exec(flushCookieJar)
         .pace(tpsPacingProducts milliseconds)
         .feed(jddDateClient)
-        .feed(jddDataN)
       .exec { session => println("ClientID :" + session("ID_SOCLE").as[String])
         session}
-        .exec(http("CLM Transaction 1")
+        .exec { session =>
+          val nextTicketId = ticketIdSeq1.next()
+          session.set("ticketId1", nextTicketId)
+        }
+        .exec { session =>
+          println("TicketID :" + session("ticketId1").as[String])
+          session
+        }
+        .exec(http("CLM_Transaction_1")
           .post("/clm-gl-rest-api/api/tickets/?user=125353&channel=L&site=3050")
           .header("Content-Type", "application/json")
           .asJson
           .body(StringBody(
             """{
                |  "date": "2023-03-15T15:00:06.000+0200",
-               |  "ticketId": "1000000-$n1",
+               |  "ticketId": "${ticketId1}",
                |  "value": 1500,
                |  "clientId":"${ID_SOCLE}",
                |  "couponsToUse": [],
@@ -78,14 +82,14 @@ object ObjectTransaction {
                |}""".stripMargin)).asJson
           .check(status.is(201)))
         .pause(TpsPause.second)
-    } // Fin Répétition
+
+
+
 
 
   //SCENARIO 2
-  val scnTransactionAchat2 = scenario("CLM-TRANSACTION-2")
-
-    .repeat(NbreIter) { //Répeter la transaction 3 fois
-      exec(flushSessionCookies)
+  val scnTransactionAchat2 = scenario("CLM TRANSACTION 2")
+      .exec(flushSessionCookies)
         .exec(flushHttpCache)
         .exec(flushCookieJar)
         .pace(tpsPacingProducts milliseconds)
@@ -94,14 +98,22 @@ object ObjectTransaction {
           println("ClientID :" + session("ID_SOCLE").as[String])
           session
         }
-        .exec(http("CLM-Transaction-2")
+        .exec { session =>
+          val nextTicketId = ticketIdSeq2.next()
+          session.set("ticketId2", nextTicketId)
+        }
+        .exec { session =>
+          println("TicketID :" + session("ticketId2").as[String])
+          session
+        }
+        .exec(http("CLM_Transaction_2")
           .post("/clm-gl-rest-api/api/tickets/?user=125353&channel=L&site=3047")
           .header("Content-Type", "application/json")
           .asJson
           .body(StringBody(
             """{
               |"date":"2023-03-20T15:00:06.000+0200",
-              |"ticketId":"2000000-$n2",
+              |"ticketId":"${ticketId2}",
               |"value":400,
               |"clientId":${ID_SOCLE},
               |"couponsToUse":[],
@@ -126,20 +138,27 @@ object ObjectTransaction {
               |}|}""".stripMargin)).asJson
           .check(status.is(201)))
         .pause(TpsPause.second)
-    } // Fin Répétition
+
+
 
 
   //SCENARIO 3
-  val scnTransactionAchat3 = scenario("CLM_TRANSACTION_3")
-
-    .repeat(NbreIter) { //Répeter la transaction 3 fois
-      exec(flushSessionCookies)
+  val scnTransactionAchat3 = scenario("CLM TRANSACTION 3")
+      .exec(flushSessionCookies)
         .exec(flushHttpCache)
         .exec(flushCookieJar)
         .pace(tpsPacingProducts milliseconds)
         .feed(jddDateClient)
         .exec { session =>
           println("ClientID :" + session("ID_SOCLE").as[String])
+          session
+        }
+        .exec { session =>
+          val nextTicketId = ticketIdSeq3.next()
+          session.set("ticketId3", nextTicketId)
+        }
+        .exec { session =>
+          println("TicketID :" + session("ticketId3").as[String])
           session
         }
         .exec(http("CLM_Transaction_3")
@@ -149,7 +168,7 @@ object ObjectTransaction {
           .body(StringBody(
             """{
               |"date":"2023-03-25T15:00:06.000+0200",
-              |"ticketId":3000000-$n3",
+              |"ticketId":"${ticketId3}",
               |"value":600,
               |"clientId":${ID_SOCLE},
               |"couponsToUse":[],
@@ -174,7 +193,6 @@ object ObjectTransaction {
               |}""".stripMargin)).asJson
           .check(status.is(201)))
         .pause(TpsPause.second)
-    } // Fin Répétition
 
 
 
